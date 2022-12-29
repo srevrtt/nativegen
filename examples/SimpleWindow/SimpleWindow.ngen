@@ -1,0 +1,12 @@
+project:
+  version: "0.1"
+  author: "Srevrtt"
+  name: "SimpleWindow"
+  identifier: "com.example.example"
+  description: "A demonstration of creating a simple, blank window with NativeGen."
+
+metadata:
+  target_os: ["windows"]
+  target_lang: "c++"
+  entrypoint: "main.ngml"
+  default_profile: "release"
