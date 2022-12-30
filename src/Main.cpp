@@ -6,12 +6,13 @@
 #include "ngen/include/ProjectGenerator.hpp"
 
 #include "include/Utils.hpp"
+#include "include/LexerUtils.hpp"
 
 int main(int argc, char *argv[])
 {
   std::string fileContents = Utilities::readSrc("../examples/SimpleWindow/SimpleWindow.ngen");
   Lexer *lexer = new Lexer(fileContents);
-  std::vector<Token> tokens = lexer->getTokens();
+  std::vector<LexerUtils::Token> tokens = lexer->getTokens();
   Analyzer *analyzer = new Analyzer(tokens);
 
   ProjectGenerator::analyze(tokens);

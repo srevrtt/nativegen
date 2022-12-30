@@ -2,10 +2,12 @@
 #include <string>
 
 #include "include/Analyzer.hpp"
+
 #include "../include/Utils.hpp"
+#include "../include/LexerUtils.hpp"
 
 // Analyzes the stream of tokens and checks for errors
-Analyzer::Analyzer(std::vector<Token> tokens)
+Analyzer::Analyzer(std::vector<LexerUtils::Token> tokens)
 {
   this->tokens = tokens;
   idx = 0;
@@ -39,7 +41,7 @@ Analyzer::Analyzer(std::vector<Token> tokens)
     {
       if (tokens[idx + 1].name != "$T_STRING")
       {
-        Utilities::fatalError("Only string are allowed inside arrays currently.");
+        Utilities::fatalError("Only strings are allowed inside arrays currently.");
       }
 
       while (tokens[idx].name != "$T_RIGHT_BRACKET")

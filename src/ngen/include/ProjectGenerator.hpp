@@ -1,5 +1,7 @@
 #pragma once
+
 #include "Lexer.hpp"
+#include "../../include/LexerUtils.hpp"
 
 struct ProjectInfo
 {
@@ -16,6 +18,6 @@ struct ProjectInfo
 
 namespace ProjectGenerator
 {
-  void analyze(std::vector<Token> tokens);
+  void analyze(std::vector<LexerUtils::Token> tokens);
   void gen(std::string filepath);
 }

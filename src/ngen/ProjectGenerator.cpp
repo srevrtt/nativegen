@@ -5,11 +5,12 @@
 #include "include/Gen.hpp"
 
 #include "../include/Utils.hpp"
+#include "../include/LexerUtils.hpp"
 
 ProjectInfo info;
 
 // Analyzes and constructs project information for generation
-void ProjectGenerator::analyze(std::vector<Token> tokens)
+void ProjectGenerator::analyze(std::vector<LexerUtils::Token> tokens)
 {
   bool analyzeProject = false;
   bool analyzeMetadata = false;
@@ -18,7 +19,7 @@ void ProjectGenerator::analyze(std::vector<Token> tokens)
 
   while (idx < tokens.size() - 1)
   {
-    Token tok = tokens[idx];
+    LexerUtils::Token tok = tokens[idx];
 
     if (analyzeProject)
     {

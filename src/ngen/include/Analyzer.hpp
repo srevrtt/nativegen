@@ -1,11 +1,13 @@
 #pragma once
+
 #include "Lexer.hpp"
+#include "../../include/LexerUtils.hpp"
 
 class Analyzer
 {
 private:
-  std::vector<Token> tokens;
+  std::vector<LexerUtils::Token> tokens;
   int idx;
 public:
-  Analyzer(std::vector<Token> tokens);
+  Analyzer(std::vector<LexerUtils::Token> tokens);
 };
